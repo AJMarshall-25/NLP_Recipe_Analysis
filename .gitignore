@@ -1,3 +1,7 @@
+# unecessary files
+supplemental_docs/
+archive/
+
 .DS_Store
 #catboost folder
 /notebooks/crystal/catboost_info
