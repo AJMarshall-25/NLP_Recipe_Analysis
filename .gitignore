@@ -2,6 +2,9 @@
 supplemental_docs/
 archive/
 
+# Data file as it is too large
+data/
+
 .DS_Store
 #catboost folder
 /notebooks/crystal/catboost_info
