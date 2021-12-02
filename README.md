@@ -34,7 +34,7 @@ While I would prefer higher accuracy rates on my current model I remain positive
 
 ## Repository Structure
 
-NLP_Recipe_Analysis
+NLP_Recipe_Analysis  
 |- archive #folder containing experiment and draft notebooks  
 |- images  #folder containing images used in project documents (not all images are currently in use in the final notebook)  
 |- .gitignore  
