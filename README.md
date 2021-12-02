@@ -1,5 +1,5 @@
-<center> # What's for Dinner? </center>
-<center> # Recipe Classification with NLP </center>
+# What's for Dinner?
+# Recipe Classification with NLP
  
 ![](images/header.PNG)
 
