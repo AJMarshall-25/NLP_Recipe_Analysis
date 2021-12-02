@@ -40,4 +40,4 @@ NLP_Recipe_Analysis
 |- .gitignore  
 |- README.md  
 |- To_do.ipynb #scratch notebook containing To Do list  
-|- recipe-classification-with-nlp-v3-MVP  
+|- recipe-classification-with-nlp-v3-MVP.ipynb  
