@@ -31,3 +31,12 @@ Initial testing on a wide array of types resulted in the best performances from 
 ## Conclusion
 
 While I would prefer higher accuracy rates on my current model I remain positive it can be improved, and more importently expanded to classify other types of recipes such as 'kid-friendly' or 'healthy'. Even with it's current target the model can be effectively used by website's and publishers to vet and classify submitted recipes in a consistent manner.
+
+## Repository Structure
+
+|- archive #folder containing experiment and draft notebooks
+|- images  #folder containing images used in project documents (not all images are currently in use in the final notebook)
+|- .gitignore
+|- README.md
+|- To_do.ipynb #scratch notebook containing To Do list
+|- recipe-classification-with-nlp-v3-MVP
