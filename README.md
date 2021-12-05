@@ -35,9 +35,15 @@ While I would prefer higher accuracy rates on my current model I remain positive
 ## Repository Structure
 
 NLP_Recipe_Analysis  
-|- archive #folder containing experiment and draft notebooks  
-|- images  #folder containing images used in project documents (not all images are currently in use in the final notebook)  
-|- .gitignore  
-|- README.md  
-|- To_do.ipynb #scratch notebook containing To Do list  
-|- recipe-classification-with-nlp-v3-MVP.ipynb  
+|-- archive #folder containing experiment and draft notebooks  
+|-|- Drafts # drafts of final model
+|-+- Experiments # testing processes and ideas
+|-- images  #folder containing images collected for project documents   
+|-- .gitignore  
+|-- README.md  
+|-- To_do.ipynb #scratch notebook containing To Do list  
++-- recipe-classification-with-nlp-v4_CURRENTFINAL.ipynb  
+
+
+
+
