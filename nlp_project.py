@@ -3,8 +3,6 @@ import re
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
-%matplotlib inline
-
 
 from nltk import FreqDist
 
