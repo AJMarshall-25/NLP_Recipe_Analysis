@@ -160,32 +160,30 @@ def remove_stop_words(count, stop_words):
 
 def evaluate(estimator, X_tr, X_te, y_tr, y_te, cv=5):
     '''
-Function takes in estimator, training data, test data, 
-and the cross validation splitting strategy, and returns the accuracy, precision, recall, f1 and the ROC-AUC
-scores for the model as well as a confusion matrix visualization.  Based on Phase 3 Project 
-https://github.com/Nindorph/TanzanianWaterWells/blob/main/Modeling_Final.ipynb and Lindsey Berlin’s evaluate function
-code found at: 
-https://github.com/lindseyberlin/Cat-in-the-Dat-Project/blob/main/notebooks/Lindsey/EDA-Initial-Models.ipynb
-------------------------------------------------------------------------------------------
-Inputs: 
--Estimator - Estimator object  
--X_tr – X_train dataframe
--X_te – X_test dataframe
--Y_tr – y_train dataframe
--Y_te – y_test dataframe
--Cv – If cross_val  set to true this determines the cross-validation splitting strategy.  
-        Takes in all value options for sklearn.model_selection_cross_val_score “cv” parameter:
-        - None, to use the default 5-fold cross validation,
-        - int, to specify the number of folds in a (Stratified)KFold,
-        - CV splitter,
-        - An iterable yielding (train, test) splits as arrays of indices
+    Function takes in estimator, training data, test data, 
+    and the cross validation splitting strategy, and returns the accuracy, precision, recall, f1 and the ROC-AUC
+    scores for the model as well as a confusion matrix visualization.  Based on Phase 3 Project 
+    https://github.com/Nindorph/TanzanianWaterWells/blob/main/Modeling_Final.ipynb and Lindsey Berlin’s evaluate function
+    code found at: 
+    https://github.com/lindseyberlin/Cat-in-the-Dat-Project/blob/main/notebooks/Lindsey/EDA-Initial-Models.ipynb
+    ------------------------------------------------------------------------------------------
+    Inputs: 
+    -Estimator - Estimator object  
+    -X_tr – X_train dataframe
+    -X_te – X_test dataframe
+    -Y_tr – y_train dataframe
+    -Y_te – y_test dataframe
+    -Cv – If cross_val  set to true this determines the cross-validation splitting strategy.  
+            Takes in all value options for sklearn.model_selection_cross_val_score “cv” parameter:
+            - None, to use the default 5-fold cross validation,
+            - int, to specify the number of folds in a (Stratified)KFold,
+            - CV splitter,
+            - An iterable yielding (train, test) splits as arrays of indices
 
 
-Returns – nothing is returned 
-
-
-    '''
-    #If no grid search is being performed, go through evaluation steps as normal, including cross validation
+    Returns – nothing is returned '''
+    
+    #go through evaluation steps as normal, including cross validation
     #Cross-Validate
     output = cross_validate(estimator, X_tr, y_tr, cv=cv,
                             scoring=['accuracy', 'precision','recall', 'f1', 'roc_auc'])
