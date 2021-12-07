@@ -170,7 +170,7 @@ def evaluate(estimator, X_tr, X_te, y_tr, y_te, cv=5):
     https://github.com/lindseyberlin/Cat-in-the-Dat-Project/blob/main/notebooks/Lindsey/EDA-Initial-Models.ipynb
     ------------------------------------------------------------------------------------------
     Inputs: 
-    -Estimator - Estimator object  
+    -estimator - Estimator object  
     -X_tr – X_train dataframe
     -X_te – X_test dataframe
     -Y_tr – y_train dataframe
