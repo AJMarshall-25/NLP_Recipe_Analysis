@@ -6,6 +6,8 @@ from matplotlib.ticker import MaxNLocator
 
 from nltk import FreqDist
 
+import spacy
+
 from sklearn.model_selection import cross_validate
 from sklearn.metrics import (roc_auc_score, plot_confusion_matrix, accuracy_score,
                              precision_score, recall_score, f1_score)
@@ -255,3 +257,33 @@ def score_tracker( gscv_results, model_name, score_df=None):
         return all_scores.sort_values('mean_test_score')
     else:
         return results
+
+def spacy_cleaning(x, nlp):
+    '''takes in a spacy Document-type (aka a collection of tokens) and returns either a string tokens that have been
+    cleaned of:
+                - stop words
+                - puntuation 
+                - numbers
+    
+    as well as lemmetizes the results.
+    
+    Inputs:
+    x - spacy Document
+    nlp - spaCy model 
+    
+    Returns:
+    Spacy Document or string
+    '''
+
+    x_nlp = nlp(x)
+    lemma = [y.lemma_ for y in x_nlp if not (y.is_stop) and not #remove stopwords
+                                     (y.is_punct)] #remove punctuation 
+    
+    #replacing URLs with a generic "URL" and removing numbers
+    no_web = [re.sub(r'http\S+', 'URL', word) for word in lemma]
+    no_num = [re.sub(r'[0-9]', '', word) for word in no_web]
+    
+    #removes white spaces and odd single characters
+    final = [x.lower() for x in no_num if (len(x)>1)]
+
+    return " ".join(final)
