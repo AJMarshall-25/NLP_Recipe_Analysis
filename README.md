@@ -26,7 +26,7 @@ This dataset does not have a target variable included so one needs to be constru
 
 The baseline for this model was created by running numeric metadata about the recipes in my dataset, such as number of ingredients or number of characters in the recipe's description, through a LogisticRegression model to make sure that a model trained on these values would not outperform a model using NLP.
 
-Initial testing on a wide array of types resulted in the best performances from MultinomialNB and LogisticRegression models using the TfidfVectorizer, with further hyperparameter tuning resulting in a model with 71% accuracy, 16% higher then the accuracy of the baseline model. This demonstrates that NLP is the better method for recipe difficulty classification.
+Initial testing on a wide array of types resulted in the best performances from MultinomialNB and LogisticRegression models using the TfidfVectorizer, with further hyperparameter tuning resulting in a model with 71% accuracy, 16% higher then the accuracy of the baseline model. This demonstrates that NLP is the better method for recipe difficulty classification. Running my final model on the holdout data resulted in 70% accuracy in overall predictions.  Accuracy was used as my primary evaluation metric because, as anyone who has used Yelp, small mistakes can easily inspire a heated response, and there are so many recipe websites out there that a user can simply walk away from one that has dissatisfied them. 
 
 ## Conclusion
 
