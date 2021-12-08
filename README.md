@@ -41,7 +41,7 @@ Once this model is sufficiently improved it will be a useful tool for websites a
 
 ## Repository Navigation
 - Final notebook can be found [here](recipe-classification-with-nlp.ipynb)  
-- Original data can be found [here](../data/foodcom_recipes_with_classification.csv)
+- Original data can be found [here](data/foodcom_recipes_with_classification.csv)
 - Presentation pdf can be found [here](NLP_recipe_analysis_presentation.pdf)
 
 NLP_Recipe_Analysis  
