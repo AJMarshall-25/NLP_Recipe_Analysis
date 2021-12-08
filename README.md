@@ -24,25 +24,34 @@ This dataset does not have a target variable included so one needs to be constru
 
 ## Modeling and Evaluation
 
-The baseline for this model was created by running numeric metadata about the recipes in my dataset, such as number of ingredients or number of characters in the recipe's description, through a LogisticRegression model to make sure that a model trained on these values would not outperform a model using NLP.
+The baseline for this model was created by running numeric metadata about the recipes in my dataset, such as number of ingredients or number of characters in the recipe's description, through a LogisticRegression model to make sure that a model trained on these values would not outperform a model using NLP.  The baseline model had an accuracy of 55%, slightly better then simply guessing.
 
 Initial testing on a wide array of types resulted in the best performances from MultinomialNB and LogisticRegression models using the TfidfVectorizer, with further hyperparameter tuning resulting in a model with 71% accuracy, 16% higher then the accuracy of the baseline model. This demonstrates that NLP is the better method for recipe difficulty classification. Running my final model on the holdout data resulted in 70% accuracy in overall predictions.  Accuracy was used as my primary evaluation metric because, as anyone who has used Yelp, small mistakes can easily inspire a heated response, and there are so many recipe websites out there that a user can simply walk away from one that has dissatisfied them. 
 
-## Conclusion
+## Conclusion & Next Steps 
 
-While I would prefer higher accuracy rates on my current model I remain positive it can be improved, and more importently expanded to classify other types of recipes such as 'kid-friendly' or 'healthy'. Even with it's current target the model can be effectively used by website's and publishers to vet and classify submitted recipes in a consistent manner.
+When evaluating the score results model accuracy was the top priority as the ramifications of someone using an incorrectly labeled recipe can be significant - errors misclassifying easy as not-easy or vice versa can lead to loss of time to the individual or loss of business on the side of the recipe provider  - look at Yelp to see how far one bad experience can enrage people - and reputation, while not easily quantified as other metrics, is crucial to maintain given how many recipe sites and cookbooks exist.  This makes it easier for someone, upon having a bad experience to simply find their recipes elsewhere and never look back. 
 
-## Repository Structure
+If given more time I would use it to improve my modle by:
+- further testing of the DecisionTree model as I may have hobbled the basic version's performance to save processing time
+- modeling with neural networks like MLPClassifier
+- using scraping to collect popularity data on the recipes - how many ratings, the average rating
+
+Once this model is sufficiently improved it will be a useful tool for websites and publishers of recipes, reducing the amount of effort, and inconsistency inherent in human evaluation, required to determine recipe difficulty. This model can also be expanded to include other recipe types - classifying if a recipe is an easy dinner, an easy lunch, or an easy breakfast. It also can stand as a jumping off point for developing models that predict if a recipe is healthy, or what kind of cuisine it describes.
+
+## Repository Navigation
+- Final notebook can be found [here](recipe-classification-with-nlp.ipynb)  
+- Original data can be found [here](../data/foodcom_recipes_with_classification.csv)
+- Presentation pdf can be found [here](NLP_recipe_analysis_presentation.pdf)
 
 NLP_Recipe_Analysis  
-|-- archive #folder containing experiment and draft notebooks  
-|-|- Drafts # drafts of final model
-|-+- Experiments # testing processes and ideas
-|-- images  #folder containing images collected for project documents   
-|-- .gitignore  
-|-- README.md  
-|-- To_do.ipynb #scratch notebook containing To Do list  
-+-- recipe-classification-with-nlp-v4_CURRENTFINAL.ipynb  
+|__ archive                                      # folder containing experiment and draft notebooks  
+| |- Drafts                                      # drafts of final model notebook
+| ╹- Experiments                                 # notebooks testing processes and ideas
+|__ images                                       # folder containing images collected for project documents   
+|__ .gitignore  
+|__ README.md  
+╹-- recipe-classification-with-nlp.ipynb  
 
 
 
