@@ -44,14 +44,9 @@ Once this model is sufficiently improved it will be a useful tool for websites a
 - Original data can be found [here](https://www.kaggle.com/shuyangli94/foodcom-recipes-with-search-terms-and-tags). Once downloaded and unzipped place 'foodcom_recipes_with_classification.csv' into a file called 'data'.
 - Presentation pdf can be found [here](NLP_recipe_analysis_presentation.pdf)
 
-NLP_Recipe_Analysis  
-┃__ archive                                      # folder containing experiment and draft notebooks    
-┃ ┃- Drafts                                      # drafts of final model notebook  
-┃ ╹- Experiments                                 # notebooks testing processes and ideas  
-┃__ images                                       # folder containing images collected for project documents   
-┃__ .gitignore  
-┃__ README.md  
-╹-- recipe-classification-with-nlp.ipynb  
+[](images/repo_structure.PNG)
+
+
 
 
 
