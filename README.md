@@ -44,7 +44,7 @@ Once this model is sufficiently improved it will be a useful tool for websites a
 - Original data can be found [here](https://www.kaggle.com/shuyangli94/foodcom-recipes-with-search-terms-and-tags). Once downloaded and unzipped place 'foodcom_recipes_with_classification.csv' into a file called 'data'.
 - Presentation pdf can be found [here](NLP_recipe_analysis_presentation.pdf)
 
-[](images/repo_structure.PNG)
+![](images/repo_structure.PNG)
 
 
 
